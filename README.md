@@ -1,1 +1,1 @@
-#headless-wp-next-starter
+# headless-wp-next-starter
