@@ -10,6 +10,7 @@ export default function SlugPage({ post }) {
     <div>
       <Head>
         <title>Headless WP Next Starter</title>
+        <link rel="icon" href="favicon.ico"></link>
       </Head>
 
       <main>

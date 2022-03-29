@@ -9,6 +9,7 @@ export default function Home({ posts }) {
     <div className="container">
       <Head>
         <title>Headless WP Next Starter</title>
+        <link rel="icon" href="favicon.ico"></link>
       </Head>
 
       <main>
@@ -24,7 +25,7 @@ export default function Home({ posts }) {
           {
             posts.map((post) => {
               return (
-                <PostCard post={post}></PostCard>
+                <PostCard key={post.id} post={post}></PostCard>
               )
             })
           }
