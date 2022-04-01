@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
-import { getPostBySlug, getAllPosts } from '../lib/apollo';
 import { client } from '../lib/apollo';
 import { gql } from "@apollo/client";
 
@@ -30,27 +29,30 @@ export default function SlugPage({ post }) {
   )
 }
 const GET_POST = gql`
-query GetPostByUri($uri: ID!) {
-  post(id: $uri, idType: URI) {
-    author {
-      node {
-        firstName
-        lastName
+    query GetPostByUri($uri: ID!) {
+      post(id: $uri, idType: URI) {
+        author {
+          node {
+            firstName
+            lastName
+          }
+        }
+        content
+        title
+        date
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
       }
     }
-    content
-    title
-    date
-    featuredImage {
-      node {
-        mediaItemUrl
-      }
-    }
-  }
-}
-`
+    `
 
-export async function getStaticProps({params}){
+export async function getStaticProps({ params }){
+  //  the params argument for this function corresponds to the dynamic URL segments
+  //  we included in our page-based route. So, in this case, the `params` object will have
+  //  a property named `uri` that contains that route segment when a user hits the page
     const response = await client.query({
       query: GET_POST,
       variables: {

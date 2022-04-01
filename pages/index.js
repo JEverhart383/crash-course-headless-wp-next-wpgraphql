@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import PostCard from '../components/PostCard';
+import { useQuery } from '@apollo/client';
 import { client } from '../lib/apollo';
 import { gql } from "@apollo/client";
 
