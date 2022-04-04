@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import PostCard from '../components/PostCard';
-import { useQuery } from '@apollo/client';
-import { client } from '../lib/apollo';
-import { gql } from "@apollo/client";
+import { getAllPosts } from '../lib/test-data';
+
 
 export default function Home({ posts }) {
   return (
@@ -26,7 +25,7 @@ export default function Home({ posts }) {
           {
             posts.map((post) => {
               return (
-                <PostCard key={post.id} post={post}></PostCard>
+                <PostCard key={post.uri} post={post}></PostCard>
               )
             })
           }
@@ -38,30 +37,9 @@ export default function Home({ posts }) {
   )
 }
 
-const GET_POSTS = gql`
-  query GET_POSTS {
-    posts {
-      nodes {
-        id
-        content
-        author {
-          node {
-            id
-          }
-        }
-        title
-        uri
-      }
-    }
-  }
-`;
-
 export async function getStaticProps(){
 
-  const response = await client.query({
-    query: GET_POSTS
-  })
-
+  const response = await getAllPosts()
   const posts = response?.data?.posts?.nodes
   return {
     props: {
