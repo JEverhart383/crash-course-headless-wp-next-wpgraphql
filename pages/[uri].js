@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer'
 import { client } from '../lib/apollo';
 import { gql } from "@apollo/client";
+import { getPostByUri } from '../lib/test-data';
 
 export default function SlugPage({ post }) {
 
@@ -29,25 +30,20 @@ export default function SlugPage({ post }) {
   )
 }
 const GET_POST = gql`
-    query GetPostByUri($uri: ID!) {
-      post(id: $uri, idType: URI) {
+    query GetPostByURI($id: ID!) {
+      post(id: $id, idType: URI) {
+        title
+        content
+        date
         author {
           node {
             firstName
             lastName
           }
         }
-        content
-        title
-        date
-        featuredImage {
-          node {
-            mediaItemUrl
-          }
-        }
       }
     }
-    `
+  `
 
 export async function getStaticProps({ params }){
   //  the params argument for this function corresponds to the dynamic URL segments
@@ -56,9 +52,10 @@ export async function getStaticProps({ params }){
     const response = await client.query({
       query: GET_POST,
       variables: {
-        uri: params.uri
+        id: params.uri
       }
     })
+    // const response = await getPostByUri(params.uri)
     const post = response?.data?.post
     return {
       props: {
