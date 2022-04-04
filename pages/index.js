@@ -26,7 +26,7 @@ export default function HomePage({ posts }) {
           {
             posts.map((post) => {
               return (
-                <PostCard key={post.id} post={post}></PostCard>
+                <PostCard key={post.uri} post={post}></PostCard>
               )
             })
           }
