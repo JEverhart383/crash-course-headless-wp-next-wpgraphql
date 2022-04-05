@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import PostCard from '../components/PostCard';
-import { getAllPosts } from "../lib/test-data"
 import { client } from '../lib/apollo';
 import { gql } from "@apollo/client";
 
