@@ -13,4 +13,4 @@ This crash course is a part of WP Engine's Headless Developer Roadmap. It covers
 
 ## Headless WordPress Hosting with Atlas
 
-WP Engine's Atlas platform provides a performant and user-friendly hosting platform for headless WordPress and Node-based JavaScript apps. Create a free sandbox account to try the platform. 
+WP Engine's Atlas platform provides a performant and user-friendly hosting platform for headless WordPress and Node-based JavaScript apps. [Create a free sandbox account](https://wpengine.com/atlas/) to try the platform. 
