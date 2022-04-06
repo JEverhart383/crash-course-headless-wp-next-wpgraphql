@@ -7,6 +7,9 @@ This crash course is a part of WP Engine's Headless Developer Roadmap. It covers
 - Choose appropriate Next.js rendering methods based on your content
 
 
+[✍️ Read the step-by-step tutorial]()
+[📹 Watch the video]()
+
 
 ## Headless WordPress Hosting with Atlas
 
