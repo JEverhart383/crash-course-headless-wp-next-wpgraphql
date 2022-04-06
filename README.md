@@ -12,12 +12,12 @@ This crash course is a part of WP Engine's Headless Developer Roadmap. It covers
 
 ## Getting Started
 Follow along with the blog post, and run the following commands to clone this repo:
-`
-git clone https://github.com/JEverhart383/crash-course-headless-wp-next-wpgraphql.git
-cd crash-course-headless-wp-next-wpgraphql
-npm install
-npm run dev
-`
+
+    git clone https://github.com/JEverhart383/crash-course-headless-wp-next-wpgraphql.git
+    cd crash-course-headless-wp-next-wpgraphql
+    npm install
+    npm run dev
+
 
 ## Headless WordPress Hosting with Atlas
 
