@@ -7,8 +7,8 @@ This crash course is a part of WP Engine's Headless Developer Roadmap. It covers
 - Choose appropriate Next.js rendering methods based on your content
 
 
-[✍️ Read the step-by-step tutorial]()
-[📹 Watch the video]()
+[✍️ Read the step-by-step tutorial](https://developers.wpengine.com/blog/crash-course-build-a-simple-headless-wordpress-app-with-next-js-wpgraphql)
+[📹 Watch the video](https://www.youtube.com/playlist?list=PLmHWEf9to375K8Iw8NJAjVdfl3jMuZY5Y)
 
 ## Getting Started
 Follow along with the blog post, and run the following commands to clone this repo:
