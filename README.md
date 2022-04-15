@@ -8,7 +8,7 @@ This crash course is a part of WP Engine's Headless Developer Roadmap. It covers
 
 
 [✍️ Read the step-by-step tutorial](https://developers.wpengine.com/blog/crash-course-build-a-simple-headless-wordpress-app-with-next-js-wpgraphql)
-[📹 Watch the video](https://www.youtube.com/playlist?list=PLmHWEf9to375K8Iw8NJAjVdfl3jMuZY5Y)
+[📹 Watch the video](https://www.youtube.com/watch?v=wfy51nhjfUQ&t=1680s)
 
 ## Getting Started
 Follow along with the blog post, and run the following commands to clone this repo:
